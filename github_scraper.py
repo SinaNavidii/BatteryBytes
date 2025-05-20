@@ -18,8 +18,16 @@ HEADERS = {
 
 BASE_URL = "https://api.github.com/search/repositories"
 
-def fetch_trending_github_repos(keywords: List[str], max_results: int = 5, sort_by: str = "stars") -> List[dict]:
-    query_string = " ".join(keywords) + " language:python"
+from datetime import datetime, timedelta
+
+def fetch_trending_github_repos(keywords: List[str], max_results: int = 5, sort_by: str = "stars", days_back: int = 30) -> List[dict]:
+    """
+    Fetches GitHub repositories created in the last `days_back` days that match the keyword query.
+    """
+    created_since = (datetime.now() - timedelta(days=days_back)).strftime('%Y-%m-%d')
+    keyword_query = " ".join(keywords)
+    query_string = f"{keyword_query} language:python created:>={created_since}"
+
     params = {
         "q": query_string,
         "sort": sort_by,
@@ -37,7 +45,7 @@ def fetch_trending_github_repos(keywords: List[str], max_results: int = 5, sort_
     items = data.get("items", [])
 
     if not items:
-        print("No repositories found for the given keywords.")
+        print("No repositories found for the given keywords and date range.")
         return []
 
     repos = []
@@ -50,6 +58,7 @@ def fetch_trending_github_repos(keywords: List[str], max_results: int = 5, sort_
         })
 
     return repos
+
 
 # --- Run Example ---
 if __name__ == "__main__":
