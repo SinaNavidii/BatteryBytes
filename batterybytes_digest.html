@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BatteryBytes Digest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 { color: #2e7d32; }
+        h2 { border-bottom: 2px solid #ccc; padding-bottom: 0.3em; }
+        .paper, .repo {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .repo-stars {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔋 BatteryBytes Digest</h1>
+    <p><em>Last 7 Days</em></p>
+
+    <h2>📄 Latest Battery Papers (arXiv)</h2>
+    
+        <div class="paper">
+            <strong>Lifelong reinforcement learning for health-aware fast charging of lithium-ion batteries</strong><br>
+            <em>Meng Yuan, Changfu Zou</em><br>
+            <small>2025-05-16</small><br>
+            <p>Fast charging of lithium-ion batteries remains a critical bottleneck for
+widespread adoption of electric vehicles and stationary energy storage systems,
+as improperly designed fast charging can accelerate battery degradation and
+shorten lifespan. In this work, we address this challenge by proposing a
+health-aware fast charging strategy that explicitly balances charging speed and
+battery longevity across the entire service life. The key innovation lies in
+establishing a mapping between anode overpotential and the state of health
+(SoH) of battery, which is then used to constrain the terminal charging voltage
+in a twin delayed deep deterministic policy gradient (TD3) framework. By
+incorporating this SoH-dependent voltage constraint, our designed deep learning
+method mitigates side reactions and effectively extends battery life. To
+validate the proposed approach, a high-fidelity single particle model with
+electrolyte is implemented in the widely adopted PyBaMM simulation platform,
+capturing degradation phenomena at realistic scales. Comparative life-cycle
+simulations against conventional CC-CV, its variants, and constant
+current-constant overpotential methods show that the TD3-based controller
+reduces overall degradation while maintaining competitively fast charge times.
+These results demonstrate the practical viability of deep reinforcement
+learning for advanced battery management systems and pave the way for future
+explorations of health-aware, performance-optimized charging strategies.</p>
+            <a href="http://arxiv.org/abs/2505.11061v1" target="_blank">Read more →</a>
+        </div>
+    
+        <div class="paper">
+            <strong>User-centric Vehicle-to-Grid Optimization with an Input Convex Neural Network-based Battery Degradation Model</strong><br>
+            <em>Arghya Mallick, Georgios Pantazis, Mohammad Khosravi, Peyman Mohajerin Esfahani, Sergio Grammatico</em><br>
+            <small>2025-05-16</small><br>
+            <p>We propose a data-driven, user-centric vehicle-to-grid (V2G) methodology
+based on multi-objective optimization to balance battery degradation and V2G
+revenue according to EV user preference. Given the lack of accurate and
+generalizable battery degradation models, we leverage input convex neural
+networks (ICNNs) to develop a data-driven degradation model trained on
+extensive experimental datasets. This approach enables our model to capture
+nonconvex dependencies on battery temperature and time while maintaining
+convexity with respect to the charging rate. Such a partial convexity property
+ensures that the second stage of our methodology remains computationally
+efficient. In the second stage, we integrate our data-driven degradation model
+into a multi-objective optimization framework to generate an optimal smart
+charging profile for each EV. This profile effectively balances the trade-off
+between financial benefits from V2G participation and battery degradation,
+controlled by a hyperparameter reflecting the user prioritization of battery
+health. Numerical simulations show the high accuracy of the ICNN model in
+predicting battery degradation for unseen data. Finally, we present a trade-off
+curve illustrating financial benefits from V2G versus losses from battery
+health degradation based on user preferences and showcase smart charging
+strategies under realistic scenarios.</p>
+            <a href="http://arxiv.org/abs/2505.11047v1" target="_blank">Read more →</a>
+        </div>
+    
+        <div class="paper">
+            <strong>Quantum state-agnostic work extraction (almost) without dissipation</strong><br>
+            <em>Josep Lumbreras, Ruo Cheng Huang, Yanglin Hu, Mile Gu, Marco Tomamichel</em><br>
+            <small>2025-05-14</small><br>
+            <p>We investigate work extraction protocols designed to transfer the maximum
+possible energy to a battery using sequential access to $N$ copies of an
+unknown pure qubit state. The core challenge is designing interactions to
+optimally balance two competing goals: charging of the battery optimally using
+the qubit in hand, and acquiring more information by qubit to improve energy
+harvesting in subsequent rounds. Here, we leverage exploration-exploitation
+trade-off in reinforcement learning to develop adaptive strategies achieving
+energy dissipation that scales only poly-logarithmically in $N$. This
+represents an exponential improvement over current protocols based on full
+state tomography.</p>
+            <a href="http://arxiv.org/abs/2505.09456v1" target="_blank">Read more →</a>
+        </div>
+    
+        <div class="paper">
+            <strong>Electrochemical performance and diffusion kinetics of a NASICON type Na$_{3.3}$Mn$_{1.2}$Ti$_{0.75}$Mo$_{0.05}$(PO$_4$)$_3$/C cathode for low-cost sodium-ion batteries</strong><br>
+            <em>Madhav Sharma, Rajendra S. Dhaka</em><br>
+            <small>2025-05-13</small><br>
+            <p>We report the electrochemical performance and diffusion kinetics of a newly
+designed NASICON type Na$_{3.3}$Mn$_{1.2}$Ti$_{0.75}$Mo$_{0.05}$(PO$_4$)$_3$/C
+composite material as a cathode for cost-effective sodium-ion batteries. A
+novel strategy of small Mo doping successfully stabilizes the sample having
+high Mn content in single phase rhombohedral symmerty. The high-resolution
+microscopy analysis reveals nanocrystallites of around $\sim$18 nm, uniformly
+embedded within the semi-graphitic carbon matrix, which enhances the surface
+electronic conductivity and effectively shortens the sodium-ion diffusion path.
+More importantly, we demonstrate a stable electrochemical behavior, with
+enhanced discharge capacity of 124 mAh/g at 0.1 C, having good reversibility
+and retaining 77\% of its capacity after 300 cycles, and 70\% even after 400
+cycles at 2 C. The sodium-ion diffusion coefficients, estimated using both
+galvanostatic intermittent titration technique (GITT) and cyclic voltammetry
+are found to lie within the range of $10^{-9}$ to $10^{-11}$~cm$^2$/s.
+Additionally, the bond-valence site energy mapping predicted a sodium-ion
+migration energy barrier of 0.76 eV. A detailed distribution of relaxation
+times (DRT) analysis is used to deconvolute the electrochemical impedance
+spectra into distinct processes based on their characteristic relaxation times.
+Notably, the solid-state diffusion of sodium ions within the bulk electrode,
+with a relaxation time of $\sim$50 s, shows a consistent trend with the
+diffusion coefficients obtained from GITT and Warburg-based evaluations across
+the state of charge.</p>
+            <a href="http://arxiv.org/abs/2505.10572v1" target="_blank">Read more →</a>
+        </div>
+    
+
+    <h2>📦 Trending Battery Projects (GitHub)</h2>
+    
+        <div class="repo">
+            <strong>JieChungChen/cycle-consistency-transformer</strong> <span class="repo-stars">(20 stars)</span><br>
+            <p>unofficial reproduction of: a transferable lithium-ion battery remaining useful life prediction method from cycle-consistency of degradation trend(2022)</p>
+            <a href="https://github.com/JieChungChen/cycle-consistency-transformer" target="_blank">View on GitHub →</a>
+        </div>
+    
+        <div class="repo">
+            <strong>jymorille/lithium_ion_battery_degradation</strong> <span class="repo-stars">(16 stars)</span><br>
+            <p>Master Thesis for the MSc Sustainable Energy Futures, Imperial College London</p>
+            <a href="https://github.com/jymorille/lithium_ion_battery_degradation" target="_blank">View on GitHub →</a>
+        </div>
+    
+        <div class="repo">
+            <strong>alireza-data/LiB-Degradation-Patterns</strong> <span class="repo-stars">(7 stars)</span><br>
+            <p>Unveiling a Gaussian process machine learning model to predict Li-ion battery health (SOH) and remaining life (RUL). Leveraging impedance spectroscopy data from Zenodo and inspired by the Nature paper "Identifying degradation patterns of lithium-ion batteries". Implemented in Python using Matplotlib and Numpy.</p>
+            <a href="https://github.com/alireza-data/LiB-Degradation-Patterns" target="_blank">View on GitHub →</a>
+        </div>
+    
+        <div class="repo">
+            <strong>DaniCelis25/lithium_ion_battery_degradation_models</strong> <span class="repo-stars">(6 stars)</span><br>
+            <p>This code is part of a thesis work. With the objective of developing a Python library to evaluate the degradation of lithium-ion batteries, therefore, the battery degradation models that were used are from the following article, called "Modeling of Lithium-Ion Battery Degradation", by the authors Bolum Xu, Alexandre Oudalov, Andreas Ulbing, Göran Andersson and Daniel Kirschen.</p>
+            <a href="https://github.com/DaniCelis25/lithium_ion_battery_degradation_models" target="_blank">View on GitHub →</a>
+        </div>
+    
+        <div class="repo">
+            <strong>swhlqu/degradation-trajectory-prediction</strong> <span class="repo-stars">(5 stars)</span><br>
+            <p>Data and code for the paper “Predicting degradation trajectorys of lithium-ion batteries from only ten cycles using deep learning”</p>
+            <a href="https://github.com/swhlqu/degradation-trajectory-prediction" target="_blank">View on GitHub →</a>
+        </div>
+    
+        <div class="repo">
+            <strong>Gloridust/LiB-SOH-DL</strong> <span class="repo-stars">(3 stars)</span><br>
+            <p>Deep learning to estimate lithium-ion battery state of health without additional degradation experiments</p>
+            <a href="https://github.com/Gloridust/LiB-SOH-DL" target="_blank">View on GitHub →</a>
+        </div>
+    
+        <div class="repo">
+            <strong>Rasheed19/cc-voltage-project</strong> <span class="repo-stars">(3 stars)</span><br>
+            <p>A repository that contains the codes for the experiments performed in the published paper "Capacity and Internal Resistance of lithium-ion batteries: Full degradation curve prediction from Voltage response at constant Current at discharge".</p>
+            <a href="https://github.com/Rasheed19/cc-voltage-project" target="_blank">View on GitHub →</a>
+        </div>
+    
+
+</body>
+</html>
