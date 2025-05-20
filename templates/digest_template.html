@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>BatteryBytes Digest</title>
     <style>
         body {
@@ -13,14 +13,24 @@
             color: #333;
         }
         h1 { color: #2e7d32; }
-        h2 { border-bottom: 2px solid #ccc; padding-bottom: 0.3em; }
-        .paper, .repo {
+        h2 { border-bottom: 2px solid #ccc; padding-bottom: 0.3em; margin-top: 2rem; }
+        .section-item {
             margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
+            padding-bottom: 1rem;
             border-bottom: 1px solid #ddd;
         }
         .repo-stars {
             color: #999;
+        }
+        small {
+            color: #666;
+        }
+        a {
+            text-decoration: none;
+            color: #1a0dab;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -31,7 +41,7 @@
 
     <h2>📄 Latest Battery Papers (arXiv)</h2>
     {% for paper in arxiv_papers %}
-        <div class="paper">
+        <div class="section-item">
             <strong>{{ paper.title }}</strong><br>
             <em>{{ paper.authors | join(", ") }}</em><br>
             <small>{{ paper.published }}</small><br>
@@ -44,13 +54,25 @@
 
     <h2>📦 Trending Battery Projects (GitHub)</h2>
     {% for repo in github_repos %}
-        <div class="repo">
+        <div class="section-item">
             <strong>{{ repo.name }}</strong> <span class="repo-stars">({{ repo.stars }} stars)</span><br>
             <p>{{ repo.description }}</p>
             <a href="{{ repo.url }}" target="_blank">View on GitHub →</a>
         </div>
     {% else %}
         <p>No GitHub projects found.</p>
+    {% endfor %}
+
+    <h2>📰 Battery News Highlights</h2>
+    {% for news in news_items %}
+        <div class="section-item">
+            <strong>{{ news.title }}</strong> ({{ news.source }})<br>
+            <small>{{ news.published }}</small><br>
+            <p>{{ news.summary }}</p>
+            <a href="{{ news.link }}" target="_blank">Read full article →</a>
+        </div>
+    {% else %}
+        <p>No battery news found this week.</p>
     {% endfor %}
 
 </body>
