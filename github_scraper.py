@@ -4,11 +4,11 @@ from dotenv import load_dotenv
 import os
 
 # Load GitHub token from .env
-load_dotenv(dotenv_path="github_token.env")
+load_dotenv(dotenv_path=".env")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 if not GITHUB_TOKEN:
-    raise ValueError("GitHub token not found. Check your github_token.env file.")
+    raise ValueError("GitHub token not found. Check your .env file.")
 
 HEADERS = {
     "Accept": "application/vnd.github+json",
