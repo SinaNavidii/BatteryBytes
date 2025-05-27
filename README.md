@@ -39,9 +39,9 @@ I built this to keep up with battery research without checking multiple sources.
 ---
 ## 🧪 Customize
 
-Change the topic keywords in the Streamlit app or `batterybytes_config.json` to monitor any field—AI, climate, materials, etc.
+Change the topic keywords in the Streamlit app or `batterybytes_config.json` to monitor any field.
 
 ---
 ## 📬 License
 
-MIT License — feel free to fork it, build on top of it!
+MIT License — feel free to fork it and build on top of it!
